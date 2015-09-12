@@ -13,6 +13,7 @@
 		E45A30D71BA4A62900FDC798 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E45A30D61BA4A62900FDC798 /* Images.xcassets */; };
 		E45A30DA1BA4A62900FDC798 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E45A30D81BA4A62900FDC798 /* LaunchScreen.xib */; };
 		E45A30E61BA4A62900FDC798 /* characterfeederTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45A30E51BA4A62900FDC798 /* characterfeederTests.swift */; };
+		E45A30F01BA4B54C00FDC798 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45A30EF1BA4B54C00FDC798 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E45A30DF1BA4A62900FDC798 /* characterfeederTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = characterfeederTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45A30E41BA4A62900FDC798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E45A30E51BA4A62900FDC798 /* characterfeederTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = characterfeederTests.swift; sourceTree = "<group>"; };
+		E45A30EF1BA4B54C00FDC798 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				E45A30CF1BA4A62900FDC798 /* AppDelegate.swift */,
 				E45A30D11BA4A62900FDC798 /* ViewController.swift */,
 				E45A30D31BA4A62900FDC798 /* Main.storyboard */,
+				E45A30EF1BA4B54C00FDC798 /* InfoViewController.swift */,
 				E45A30D61BA4A62900FDC798 /* Images.xcassets */,
 				E45A30D81BA4A62900FDC798 /* LaunchScreen.xib */,
 				E45A30CD1BA4A62900FDC798 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E45A30D21BA4A62900FDC798 /* ViewController.swift in Sources */,
+				E45A30F01BA4B54C00FDC798 /* InfoViewController.swift in Sources */,
 				E45A30D01BA4A62900FDC798 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				E45A30EB1BA4A62900FDC798 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E45A30EC1BA4A62900FDC798 /* Build configuration list for PBXNativeTarget "characterfeederTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				E45A30EE1BA4A62900FDC798 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
