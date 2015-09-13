@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E42B577B1BA54B41002EFC59 /* LunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B577A1BA54B41002EFC59 /* LunchListViewController.swift */; };
 		E45A30D01BA4A62900FDC798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45A30CF1BA4A62900FDC798 /* AppDelegate.swift */; };
 		E45A30D21BA4A62900FDC798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45A30D11BA4A62900FDC798 /* ViewController.swift */; };
 		E45A30D51BA4A62900FDC798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E45A30D31BA4A62900FDC798 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		E48405EA1BA5022B000F22B8 /* CharacterBriefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48405E91BA5022B000F22B8 /* CharacterBriefViewController.swift */; };
 		E48405EC1BA5130F000F22B8 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48405EB1BA5130F000F22B8 /* KDCircularProgress.swift */; };
 		E48405EE1BA514FE000F22B8 /* HealthReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48405ED1BA514FE000F22B8 /* HealthReportViewController.swift */; };
+		E48405F01BA517BF000F22B8 /* BreakfastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48405EF1BA517BF000F22B8 /* BreakfastListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E42B577A1BA54B41002EFC59 /* LunchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchListViewController.swift; sourceTree = "<group>"; };
 		E45A30CA1BA4A62900FDC798 /* characterfeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = characterfeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45A30CE1BA4A62900FDC798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E45A30CF1BA4A62900FDC798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		E48405E91BA5022B000F22B8 /* CharacterBriefViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterBriefViewController.swift; sourceTree = "<group>"; };
 		E48405EB1BA5130F000F22B8 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		E48405ED1BA514FE000F22B8 /* HealthReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthReportViewController.swift; sourceTree = "<group>"; };
+		E48405EF1BA517BF000F22B8 /* BreakfastListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakfastListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 				E45A30CF1BA4A62900FDC798 /* AppDelegate.swift */,
 				E45A30D11BA4A62900FDC798 /* ViewController.swift */,
 				E45A30D31BA4A62900FDC798 /* Main.storyboard */,
+				E48405EF1BA517BF000F22B8 /* BreakfastListViewController.swift */,
+				E42B577A1BA54B41002EFC59 /* LunchListViewController.swift */,
 				E48405ED1BA514FE000F22B8 /* HealthReportViewController.swift */,
 				E45A31271BA4FBB500FDC798 /* MealChoiceViewController.swift */,
 				E48405E91BA5022B000F22B8 /* CharacterBriefViewController.swift */,
@@ -245,7 +251,9 @@
 				E45A30F01BA4B54C00FDC798 /* InfoViewController.swift in Sources */,
 				E48405EE1BA514FE000F22B8 /* HealthReportViewController.swift in Sources */,
 				E45A31281BA4FBB500FDC798 /* MealChoiceViewController.swift in Sources */,
+				E48405F01BA517BF000F22B8 /* BreakfastListViewController.swift in Sources */,
 				E45A30D01BA4A62900FDC798 /* AppDelegate.swift in Sources */,
+				E42B577B1BA54B41002EFC59 /* LunchListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +385,7 @@
 				INFOPLIST_FILE = characterfeeder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -387,6 +396,7 @@
 				INFOPLIST_FILE = characterfeeder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

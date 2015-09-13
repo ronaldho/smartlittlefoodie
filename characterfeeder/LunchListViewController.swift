@@ -1,5 +1,5 @@
 //
-//  MealChoiceViewController.swift
+//  LunchListViewController.swift
 //  characterfeeder
 //
 //  Created by Ronald Ho on 2015-09-12.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class MealChoiceViewController: UIViewController {
+class LunchListViewController: UIViewController {
 
-//    var mealChoices = [String]();
+    
+    var mealChoices = [String]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
