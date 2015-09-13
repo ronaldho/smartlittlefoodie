@@ -3,6 +3,19 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Grinched 2.0.ttf">
+            <string>Grinched2.0</string>
+            <string>Grinched2.0</string>
+            <string>Grinched2.0</string>
+            <string>Grinched2.0</string>
+        </mutableArray>
+        <mutableArray key="Starlight.ttf">
+            <string>Starlight</string>
+            <string>Starlight</string>
+            <string>Starlight</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -15,11 +28,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Amz-va-kB8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJ2-Ni-7dx">
+                                <rect key="frame" x="225" y="240" width="150" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="4Yd-dF-9Py"/>
+                                    <constraint firstAttribute="height" constant="120" id="jsH-ox-EOQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Grinched2.0" family="Grinched 2.0" pointSize="35"/>
+                                <state key="normal" title="Start" backgroundImage="redbutton">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="99k-k3-q3J" kind="show" id="xU5-xz-2j2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="uJ2-Ni-7dx" firstAttribute="centerX" secondItem="Amz-va-kB8" secondAttribute="centerX" id="3x0-o6-IJQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Amz-va-kB8" secondAttribute="trailing" id="lFB-wb-lxw"/>
+                            <constraint firstItem="Amz-va-kB8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pJD-wq-Ypb"/>
+                            <constraint firstItem="uJ2-Ni-7dx" firstAttribute="centerY" secondItem="Amz-va-kB8" secondAttribute="centerY" id="pgO-JS-qpP"/>
+                            <constraint firstItem="Amz-va-kB8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qdJ-vO-VHh"/>
+                            <constraint firstItem="Amz-va-kB8" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="veO-zU-hyw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="493" y="475"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="VNg-s9-dad">
@@ -33,16 +74,220 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZ0-OG-78R">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZ0-OG-78R">
                                 <rect key="frame" x="0.0" y="430" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xF7-bV-9sP" id="kf9-mD-n05"/>
+                                    <outlet property="delegate" destination="xF7-bV-9sP" id="kkW-Vp-kKP"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sZ0-OG-78R" secondAttribute="trailing" id="FB2-Qh-1Yl"/>
+                            <constraint firstItem="sZ0-OG-78R" firstAttribute="leading" secondItem="fWw-P9-Sg5" secondAttribute="leading" id="FdW-qt-0R3"/>
+                            <constraint firstItem="So6-Zf-tjU" firstAttribute="top" secondItem="sZ0-OG-78R" secondAttribute="bottom" constant="8" symbolic="YES" id="RsQ-lK-fmV"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Q7-RC-apu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="450"/>
+            <point key="canvasLocation" x="1539" y="-257"/>
+        </scene>
+        <!--Character Brief View Controller-->
+        <scene sceneID="Xa8-bm-xsa">
+            <objects>
+                <viewController id="54x-Dj-D6F" customClass="CharacterBriefViewController" customModule="characterfeeder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NGF-lv-dtx"/>
+                        <viewControllerLayoutGuide type="bottom" id="68h-TX-Ast"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3WL-hq-XPo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-background-crown" translatesAutoresizingMaskIntoConstraints="NO" id="0vF-9Z-09x">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3h-Ib-kWL">
+                                <rect key="frame" x="182" y="425" width="237" height="111"/>
+                                <fontDescription key="fontDescription" name="Grinched2.0" family="Grinched 2.0" pointSize="28"/>
+                                <state key="normal" title="Let's Go!" backgroundImage="redbutton">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0vF-9Z-09x" firstAttribute="top" secondItem="3WL-hq-XPo" secondAttribute="top" id="Goq-5n-ZFe"/>
+                            <constraint firstAttribute="trailing" secondItem="0vF-9Z-09x" secondAttribute="trailing" id="OpX-Rt-jDu"/>
+                            <constraint firstItem="0vF-9Z-09x" firstAttribute="leading" secondItem="3WL-hq-XPo" secondAttribute="leading" id="PVb-tj-T42"/>
+                            <constraint firstItem="0vF-9Z-09x" firstAttribute="bottom" secondItem="68h-TX-Ast" secondAttribute="top" id="Wce-Wf-V0N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ohF-GV-nqx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icg-8J-UH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="502"/>
+        </scene>
+        <!--Meal Choice View Controller-->
+        <scene sceneID="pod-fL-W1f">
+            <objects>
+                <viewController id="sdw-Sv-2IG" customClass="MealChoiceViewController" customModule="characterfeeder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PrF-u0-zQt"/>
+                        <viewControllerLayoutGuide type="bottom" id="wYF-2G-vAS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s5f-TL-lQe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-background-crown" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-g3-b4v">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dey-oz-e6a">
+                                <rect key="frame" x="140" y="94" width="320" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="UK7-5c-L4s"/>
+                                    <constraint firstAttribute="height" constant="150" id="vJM-EW-4MG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Starlight" family="Starlight" pointSize="30"/>
+                                <state key="normal" title="Breakfast" backgroundImage="green button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hH4-gf-ht9">
+                                <rect key="frame" x="138" y="356" width="320" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="3Az-Pf-pne"/>
+                                    <constraint firstAttribute="width" constant="320" id="LFR-Es-AuG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Starlight" family="Starlight" pointSize="30"/>
+                                <state key="normal" title="Dinner" backgroundImage="green button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cju-sT-tUb">
+                                <rect key="frame" x="138" y="225" width="320" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="GVb-z3-NaC"/>
+                                    <constraint firstAttribute="width" constant="320" id="eAf-Xh-jA9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Starlight" family="Starlight" pointSize="30"/>
+                                <state key="normal" title="Lunch" backgroundImage="green button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ghc-g3-b4v" firstAttribute="bottom" secondItem="wYF-2G-vAS" secondAttribute="top" id="46Y-QB-XAN"/>
+                            <constraint firstItem="dey-oz-e6a" firstAttribute="top" secondItem="PrF-u0-zQt" secondAttribute="bottom" constant="74" id="8dj-tv-Lr3"/>
+                            <constraint firstItem="Cju-sT-tUb" firstAttribute="leading" secondItem="s5f-TL-lQe" secondAttribute="leading" constant="138" id="9jJ-mL-TO4"/>
+                            <constraint firstItem="Cju-sT-tUb" firstAttribute="leading" secondItem="hH4-gf-ht9" secondAttribute="leading" id="BDI-Ko-1Z4"/>
+                            <constraint firstItem="Cju-sT-tUb" firstAttribute="centerX" secondItem="Ghc-g3-b4v" secondAttribute="centerX" constant="-2" id="KKO-ev-fQM"/>
+                            <constraint firstItem="Ghc-g3-b4v" firstAttribute="centerX" secondItem="dey-oz-e6a" secondAttribute="centerX" id="Rc2-d3-4qy"/>
+                            <constraint firstItem="hH4-gf-ht9" firstAttribute="centerY" secondItem="Ghc-g3-b4v" secondAttribute="centerY" constant="131" id="ULM-M3-Hma"/>
+                            <constraint firstItem="Cju-sT-tUb" firstAttribute="top" secondItem="PrF-u0-zQt" secondAttribute="bottom" constant="205" id="Vtx-V5-m3o"/>
+                            <constraint firstItem="Cju-sT-tUb" firstAttribute="top" secondItem="dey-oz-e6a" secondAttribute="bottom" constant="-19" id="dsG-x9-4PS"/>
+                            <constraint firstItem="hH4-gf-ht9" firstAttribute="centerX" secondItem="Ghc-g3-b4v" secondAttribute="centerX" constant="-2" id="gSd-rM-epD"/>
+                            <constraint firstItem="Ghc-g3-b4v" firstAttribute="top" secondItem="s5f-TL-lQe" secondAttribute="top" id="gVA-Ap-yja"/>
+                            <constraint firstAttribute="trailing" secondItem="Ghc-g3-b4v" secondAttribute="trailing" id="kka-g5-d9m"/>
+                            <constraint firstItem="Cju-sT-tUb" firstAttribute="top" secondItem="dey-oz-e6a" secondAttribute="bottom" constant="-19" id="nGv-2W-Kq7"/>
+                            <constraint firstItem="Ghc-g3-b4v" firstAttribute="centerY" secondItem="Cju-sT-tUb" secondAttribute="centerY" id="pox-We-p9Q"/>
+                            <constraint firstItem="wYF-2G-vAS" firstAttribute="top" secondItem="hH4-gf-ht9" secondAttribute="bottom" constant="94" id="rEN-6M-3Ib"/>
+                            <constraint firstItem="Ghc-g3-b4v" firstAttribute="leading" secondItem="s5f-TL-lQe" secondAttribute="leading" id="w5y-jc-bOu"/>
+                            <constraint firstItem="hH4-gf-ht9" firstAttribute="trailing" secondItem="Cju-sT-tUb" secondAttribute="trailing" id="ycR-MZ-4Pw"/>
+                            <constraint firstItem="hH4-gf-ht9" firstAttribute="top" secondItem="Cju-sT-tUb" secondAttribute="bottom" constant="-19" id="ygW-aA-tBm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8dj-tv-Lr3"/>
+                                <exclude reference="9jJ-mL-TO4"/>
+                                <exclude reference="BDI-Ko-1Z4"/>
+                                <exclude reference="Vtx-V5-m3o"/>
+                                <exclude reference="nGv-2W-Kq7"/>
+                                <exclude reference="ULM-M3-Hma"/>
+                                <exclude reference="ycR-MZ-4Pw"/>
+                                <exclude reference="rEN-6M-3Ib"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xzu-Uu-IPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="493"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="e8P-HY-Z8u">
+            <objects>
+                <viewController id="99k-k3-q3J" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GDp-QI-FE5"/>
+                        <viewControllerLayoutGuide type="bottom" id="yuu-dp-g46"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bCd-20-ZGw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="QKJ-dr-wyY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebY-ba-Ye9">
+                                <rect key="frame" x="168" y="332" width="264" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="GHY-RZ-qDH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Grinched2.0" family="Grinched 2.0" pointSize="30"/>
+                                <state key="normal" title="Other" backgroundImage="redbutton">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpc-Yd-q11">
+                                <rect key="frame" x="168" y="145" width="264" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="ThN-kq-2py"/>
+                                    <constraint firstAttribute="height" constant="104" id="k6n-cy-vMv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Grinched2.0" family="Grinched 2.0" pointSize="30"/>
+                                <state key="normal" title="Snow White" backgroundImage="redbutton">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="54x-Dj-D6F" kind="show" id="c83-4A-keA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dpc-Yd-q11" firstAttribute="leading" secondItem="ebY-ba-Ye9" secondAttribute="leading" id="DyT-oV-o7v"/>
+                            <constraint firstItem="yuu-dp-g46" firstAttribute="top" secondItem="ebY-ba-Ye9" secondAttribute="bottom" constant="154" id="GOA-pT-Vq9"/>
+                            <constraint firstItem="dpc-Yd-q11" firstAttribute="top" secondItem="GDp-QI-FE5" secondAttribute="bottom" constant="125" id="NVP-lU-cfX"/>
+                            <constraint firstItem="QKJ-dr-wyY" firstAttribute="top" secondItem="bCd-20-ZGw" secondAttribute="top" id="OrZ-uB-SW8"/>
+                            <constraint firstAttribute="trailing" secondItem="QKJ-dr-wyY" secondAttribute="trailing" id="Uhj-ar-QVk"/>
+                            <constraint firstItem="dpc-Yd-q11" firstAttribute="centerX" secondItem="QKJ-dr-wyY" secondAttribute="centerX" id="aAB-aM-OeK"/>
+                            <constraint firstItem="QKJ-dr-wyY" firstAttribute="bottom" secondItem="yuu-dp-g46" secondAttribute="top" id="aIX-Vn-dFx"/>
+                            <constraint firstItem="dpc-Yd-q11" firstAttribute="trailing" secondItem="ebY-ba-Ye9" secondAttribute="trailing" id="q9P-Zh-Yl8"/>
+                            <constraint firstItem="QKJ-dr-wyY" firstAttribute="leading" secondItem="bCd-20-ZGw" secondAttribute="leading" id="sxe-hC-vM8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gd-iw-VWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1155" y="493"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatar-background-crown" width="768" height="1024"/>
+        <image name="background" width="768" height="1024"/>
+        <image name="green button" width="640" height="360"/>
+        <image name="redbutton" width="640" height="360"/>
+    </resources>
 </document>
