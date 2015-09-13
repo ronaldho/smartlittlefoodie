@@ -30,46 +30,47 @@ class BreakfastListViewController: UIViewController {
     }
     
     func tapHelper2(sender:UITapGestureRecognizer){
-        println("image tapped 1")
+        println("image tapped 2")
         tapResponder(2);
     }
     
     func tapHelper3(sender:UITapGestureRecognizer){
-        println("image tapped 1")
+        println("image tapped 3")
         tapResponder(3);
     }
     
     func tapHelper4(sender:UITapGestureRecognizer){
-        println("image tapped 1")
+        println("image tapped 4")
         tapResponder(4);
     }
     
     func tapHelper5(sender:UITapGestureRecognizer){
-        println("image tapped 1")
+        println("image tapped 5")
         tapResponder(5);
     }
     
     func tapHelper6(sender:UITapGestureRecognizer){
-        println("image tapped 1")
+        println("image tapped 6")
         tapResponder(6);
     }
     
     func tapHelper7(sender:UITapGestureRecognizer){
-        println("image tapped 1")
+        println("image tapped 7")
         tapResponder(7);
     }
     
     func tapHelper8(sender:UITapGestureRecognizer){
-        println("image tapped 1")
+        println("image tapped 8")
         tapResponder(8);
     }
     func tapHelper9(sender:UITapGestureRecognizer){
-        println("image tapped 1")
+        println("image tapped 9")
         tapResponder(9);
     }
     
     
     func tapResponder(foodTapped:Int){
+        println(foodTapped);
         switch foodTapped{
         case 1:
             mealChoices.append("Apple")
@@ -93,6 +94,8 @@ class BreakfastListViewController: UIViewController {
             break
             
         }
+        
+        println(mealChoices);
         
         
     }

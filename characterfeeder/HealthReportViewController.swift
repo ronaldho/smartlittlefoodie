@@ -10,6 +10,8 @@ import UIKit
 
 class HealthReportViewController: UIViewController {
 
+    var mealChoices = [String]();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
