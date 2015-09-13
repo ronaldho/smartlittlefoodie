@@ -75,11 +75,11 @@ class BreakfastListViewController: UIViewController {
         case 1:
             mealChoices.append("Apple")
         case 2:
-            mealChoices.append("Oats")
-        case 3:
             mealChoices.append("Carrot")
+        case 3:
+            mealChoices.append("Candy")
         case 4:
-            mealChoices.append("Bacon")
+            mealChoices.append("Tomato")
         case 5:
             mealChoices.append("Milk")
         case 6:

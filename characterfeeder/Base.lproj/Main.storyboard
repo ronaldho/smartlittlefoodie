@@ -249,7 +249,7 @@
         <!--Dinner-->
         <scene sceneID="Riz-7k-O8w">
             <objects>
-                <viewController id="ok3-sI-0z2" sceneMemberID="viewController">
+                <viewController id="ok3-sI-0z2" customClass="DinnerListViewController" customModule="characterfeeder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ATo-AL-z5e"/>
                         <viewControllerLayoutGuide type="bottom" id="aZY-V1-YN9"/>
@@ -626,7 +626,24 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Dinner" id="83p-g3-Fqs"/>
+                    <navigationItem key="navigationItem" title="Dinner" id="83p-g3-Fqs">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="ZuZ-EI-mDH">
+                            <connections>
+                                <segue destination="Ghq-4V-ewF" kind="presentation" id="Lns-kS-Jpc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="locationEight" destination="SCK-6y-FhW" id="23t-da-6jg"/>
+                        <outlet property="locationFive" destination="APg-Rs-NBI" id="QlS-Uw-aKi"/>
+                        <outlet property="locationFour" destination="L8y-Cg-shz" id="pE3-d3-W2o"/>
+                        <outlet property="locationNine" destination="uvL-ub-1Yb" id="Qqe-tm-cWT"/>
+                        <outlet property="locationOne" destination="tRe-ri-bzD" id="gEQ-cA-Rdf"/>
+                        <outlet property="locationSeven" destination="3eF-dr-jGr" id="waY-Tq-4lu"/>
+                        <outlet property="locationSix" destination="dwm-zw-CLW" id="Srb-7P-eHo"/>
+                        <outlet property="locationThree" destination="cuT-hl-c7l" id="WfL-Vd-RVv"/>
+                        <outlet property="locationTwo" destination="Ada-pg-v55" id="ps2-Po-ZcH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p46-8S-oma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -731,7 +748,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aF6-Vq-Miz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5570.25" y="501.75"/>
+            <point key="canvasLocation" x="5565.75" y="486.75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WIb-SO-m3e">

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E42B577B1BA54B41002EFC59 /* LunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B577A1BA54B41002EFC59 /* LunchListViewController.swift */; };
+		E42B577D1BA55737002EFC59 /* DinnerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B577C1BA55737002EFC59 /* DinnerListViewController.swift */; };
+		E42B577F1BA55EEF002EFC59 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B577E1BA55EEF002EFC59 /* User.swift */; };
 		E45A30D01BA4A62900FDC798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45A30CF1BA4A62900FDC798 /* AppDelegate.swift */; };
 		E45A30D21BA4A62900FDC798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45A30D11BA4A62900FDC798 /* ViewController.swift */; };
 		E45A30D51BA4A62900FDC798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E45A30D31BA4A62900FDC798 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		E42B577A1BA54B41002EFC59 /* LunchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchListViewController.swift; sourceTree = "<group>"; };
+		E42B577C1BA55737002EFC59 /* DinnerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinnerListViewController.swift; sourceTree = "<group>"; };
+		E42B577E1BA55EEF002EFC59 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = characterfeeder/User.swift; sourceTree = "<group>"; };
 		E45A30CA1BA4A62900FDC798 /* characterfeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = characterfeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45A30CE1BA4A62900FDC798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E45A30CF1BA4A62900FDC798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 		E45A30C11BA4A62900FDC798 = {
 			isa = PBXGroup;
 			children = (
+				E42B577E1BA55EEF002EFC59 /* User.swift */,
 				E45A30CC1BA4A62900FDC798 /* characterfeeder */,
 				E45A30E21BA4A62900FDC798 /* characterfeederTests */,
 				E45A30CB1BA4A62900FDC798 /* Products */,
@@ -100,6 +105,7 @@
 				E45A30CF1BA4A62900FDC798 /* AppDelegate.swift */,
 				E45A30D11BA4A62900FDC798 /* ViewController.swift */,
 				E45A30D31BA4A62900FDC798 /* Main.storyboard */,
+				E42B577C1BA55737002EFC59 /* DinnerListViewController.swift */,
 				E48405EF1BA517BF000F22B8 /* BreakfastListViewController.swift */,
 				E42B577A1BA54B41002EFC59 /* LunchListViewController.swift */,
 				E48405ED1BA514FE000F22B8 /* HealthReportViewController.swift */,
@@ -247,12 +253,14 @@
 			files = (
 				E48405EC1BA5130F000F22B8 /* KDCircularProgress.swift in Sources */,
 				E48405EA1BA5022B000F22B8 /* CharacterBriefViewController.swift in Sources */,
+				E42B577F1BA55EEF002EFC59 /* User.swift in Sources */,
 				E45A30D21BA4A62900FDC798 /* ViewController.swift in Sources */,
 				E45A30F01BA4B54C00FDC798 /* InfoViewController.swift in Sources */,
 				E48405EE1BA514FE000F22B8 /* HealthReportViewController.swift in Sources */,
 				E45A31281BA4FBB500FDC798 /* MealChoiceViewController.swift in Sources */,
 				E48405F01BA517BF000F22B8 /* BreakfastListViewController.swift in Sources */,
 				E45A30D01BA4A62900FDC798 /* AppDelegate.swift in Sources */,
+				E42B577D1BA55737002EFC59 /* DinnerListViewController.swift in Sources */,
 				E42B577B1BA54B41002EFC59 /* LunchListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

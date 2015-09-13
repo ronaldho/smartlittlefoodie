@@ -1,14 +1,14 @@
 //
-//  LunchListViewController.swift
+//  DinnerListViewController.swift
 //  characterfeeder
 //
-//  Created by Ronald Ho on 2015-09-12.
+//  Created by Ronald Ho on 2015-09-13.
 //  Copyright (c) 2015 healthyyou. All rights reserved.
 //
 
 import UIKit
 
-class LunchListViewController: UIViewController {
+class DinnerListViewController: UIViewController {
 
     @IBOutlet weak var locationOne: UIImageView!
     @IBOutlet weak var locationTwo: UIImageView!
@@ -20,8 +20,6 @@ class LunchListViewController: UIViewController {
     @IBOutlet weak var locationEight: UIImageView!
     @IBOutlet weak var locationNine: UIImageView!
     
-//    var mealChoices:[String]?;
-//    var mealChoicesSent:[String] = []
     var mealChoices = [String]();
     
     func tapHelper1(sender:UITapGestureRecognizer){
@@ -73,23 +71,23 @@ class LunchListViewController: UIViewController {
         println(foodTapped);
         switch foodTapped{
         case 1:
-            mealChoices.append("Fish")
+            mealChoices.append("Burger")
         case 2:
-            mealChoices.append("Orange")
+            mealChoices.append("Sushi")
         case 3:
-            mealChoices.append("Mushrooms")
+            mealChoices.append("Instant Noodles")
         case 4:
-            mealChoices.append("Sandwich")
+            mealChoices.append("Hotdog")
         case 5:
-            mealChoices.append("Potato")
+            mealChoices.append("Grape")
         case 6:
-            mealChoices.append("French Fries")
+            mealChoices.append("Ice-cream")
         case 7:
-            mealChoices.append("Fried Chicken")
+            mealChoices.append("Ice Tea")
         case 8:
-            mealChoices.append("Cheese")
+            mealChoices.append("Pizza")
         case 9:
-            mealChoices.append("Cola")
+            mealChoices.append("Steak")
         default:
             break
             
@@ -98,8 +96,6 @@ class LunchListViewController: UIViewController {
         println(mealChoices);
     }
 
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
