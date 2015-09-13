@@ -10,6 +10,12 @@ import UIKit
 
 class HealthReportViewController: UIViewController {
 
+    @IBOutlet weak var happinessMeter: KDCircularProgress!
+    @IBOutlet weak var energyMeter: KDCircularProgress!
+    @IBOutlet weak var caloriesMeter: KDCircularProgress!
+    
+    
+    
     var mealChoices = [String]();
     
     enum Levels{
@@ -137,6 +143,32 @@ class HealthReportViewController: UIViewController {
         println(calsum);
         println( energysum);
         println(happinesssum);
+        
+        switch happiness{
+        case .low:
+            happinessMeter.animateFromAngle(270, toAngle: 120, duration: 50, completion: nil)
+        case .medium:
+            happinessMeter.animateFromAngle(270, toAngle: 240, duration: 100, completion: nil)
+        case .high:
+            happinessMeter.animateFromAngle(270, toAngle: 360, duration: 150, completion: nil)
+        }
+        switch energy{
+        case .low:
+            energyMeter.animateFromAngle(270, toAngle: 120, duration: 50, completion: nil)
+        case .medium:
+            energyMeter.animateFromAngle(270, toAngle: 240, duration: 100, completion: nil)
+        case .high:
+            energyMeter.animateFromAngle(270, toAngle: 360, duration: 150, completion: nil)
+        }
+        switch calories{
+        case .low:
+            caloriesMeter.animateFromAngle(270, toAngle: 120, duration: 50, completion: nil)
+        case .medium:
+            caloriesMeter.animateFromAngle(270, toAngle: 240, duration: 100, completion: nil)
+        case .high:
+            caloriesMeter.animateFromAngle(270, toAngle: 360, duration: 150, completion: nil)
+        }
+        
     }
     
 

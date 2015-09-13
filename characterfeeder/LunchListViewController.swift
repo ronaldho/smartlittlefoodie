@@ -77,7 +77,7 @@ class LunchListViewController: UIViewController {
         case 2:
             mealChoices.append("Orange")
         case 3:
-            mealChoices.append("Mushrooms")
+            mealChoices.append("Mushroom")
         case 4:
             mealChoices.append("Sandwich")
         case 5:
@@ -153,14 +153,16 @@ class LunchListViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
+        var dinnerScene = segue.destinationViewController as! DinnerListViewController
         // Pass the selected object to the new view controller.
+        dinnerScene.mealChoices = mealChoices
     }
-    */
+
 
 }

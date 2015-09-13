@@ -687,6 +687,9 @@
                                         <integer key="value" value="270"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="321" y="159" width="158" height="143"/>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qp3-SJ-9cb" customClass="KDCircularProgress" customModule="characterfeeder" customModuleProvider="target">
                                 <rect key="frame" x="112" y="288" width="158" height="143"/>
@@ -711,6 +714,9 @@
                                         <integer key="value" value="270"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="409" width="158" height="143"/>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZs-Rc-Cq0" customClass="KDCircularProgress" customModule="characterfeeder" customModuleProvider="target">
                                 <rect key="frame" x="316" y="288" width="158" height="143"/>
@@ -735,7 +741,28 @@
                                         <integer key="value" value="270"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="477" y="409" width="158" height="143"/>
+                                </variation>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happiness" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUa-bD-xGg">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="359" y="130" width="82" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLS-tj-J1T">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="369" y="325" width="63" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -744,7 +771,24 @@
                             <constraint firstItem="gUj-W0-OHM" firstAttribute="leading" secondItem="qqr-2x-LGo" secondAttribute="leading" id="ObJ-B7-QD6"/>
                             <constraint firstItem="gUj-W0-OHM" firstAttribute="top" secondItem="qqr-2x-LGo" secondAttribute="top" id="uZj-NK-jgd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="oUa-bD-xGg"/>
+                                <exclude reference="JLS-tj-J1T"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="oUa-bD-xGg"/>
+                                <include reference="JLS-tj-J1T"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="caloriesMeter" destination="AZs-Rc-Cq0" id="jqh-tD-8LU"/>
+                        <outlet property="energyMeter" destination="Qp3-SJ-9cb" id="CEf-EK-e78"/>
+                        <outlet property="happinessMeter" destination="beB-Pp-OkD" id="Shl-Le-alp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aF6-Vq-Miz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
