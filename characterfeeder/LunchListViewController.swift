@@ -26,45 +26,54 @@ class LunchListViewController: UIViewController {
     
     func tapHelper1(sender:UITapGestureRecognizer){
         println("image tapped 1")
+        locationOne.highlighted = true;
         tapResponder(1);
     }
     
     func tapHelper2(sender:UITapGestureRecognizer){
         println("image tapped 2")
+        locationTwo.highlighted = true;
         tapResponder(2);
     }
     
     func tapHelper3(sender:UITapGestureRecognizer){
         println("image tapped 3")
+        locationThree.highlighted = true;
         tapResponder(3);
     }
     
     func tapHelper4(sender:UITapGestureRecognizer){
         println("image tapped 4")
+        locationFour.highlighted = true;
         tapResponder(4);
     }
     
     func tapHelper5(sender:UITapGestureRecognizer){
         println("image tapped 5")
+        locationFive.highlighted = true;
         tapResponder(5);
     }
     
     func tapHelper6(sender:UITapGestureRecognizer){
         println("image tapped 6")
+        locationSix.highlighted = true;
         tapResponder(6);
     }
     
     func tapHelper7(sender:UITapGestureRecognizer){
         println("image tapped 7")
+        locationSeven.highlighted = true;
         tapResponder(7);
     }
     
     func tapHelper8(sender:UITapGestureRecognizer){
         println("image tapped 8")
+        locationEight.highlighted = true;
         tapResponder(8);
     }
     func tapHelper9(sender:UITapGestureRecognizer){
         println("image tapped 9")
+        locationNine.highlighted = true;
         tapResponder(9);
     }
     

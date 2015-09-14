@@ -10,6 +10,7 @@
 		E42B577B1BA54B41002EFC59 /* LunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B577A1BA54B41002EFC59 /* LunchListViewController.swift */; };
 		E42B577D1BA55737002EFC59 /* DinnerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B577C1BA55737002EFC59 /* DinnerListViewController.swift */; };
 		E42B577F1BA55EEF002EFC59 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B577E1BA55EEF002EFC59 /* User.swift */; };
+		E42B57811BA60A6E002EFC59 /* WoodyCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B57801BA60A6E002EFC59 /* WoodyCharacterViewController.swift */; };
 		E45A30D01BA4A62900FDC798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45A30CF1BA4A62900FDC798 /* AppDelegate.swift */; };
 		E45A30D21BA4A62900FDC798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45A30D11BA4A62900FDC798 /* ViewController.swift */; };
 		E45A30D51BA4A62900FDC798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E45A30D31BA4A62900FDC798 /* Main.storyboard */; };
@@ -41,7 +42,8 @@
 		E42B577A1BA54B41002EFC59 /* LunchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchListViewController.swift; sourceTree = "<group>"; };
 		E42B577C1BA55737002EFC59 /* DinnerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinnerListViewController.swift; sourceTree = "<group>"; };
 		E42B577E1BA55EEF002EFC59 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = characterfeeder/User.swift; sourceTree = "<group>"; };
-		E45A30CA1BA4A62900FDC798 /* characterfeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = characterfeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42B57801BA60A6E002EFC59 /* WoodyCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoodyCharacterViewController.swift; sourceTree = "<group>"; };
+		E45A30CA1BA4A62900FDC798 /* Foodie (Beta).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foodie (Beta).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45A30CE1BA4A62900FDC798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E45A30CF1BA4A62900FDC798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E45A30D11BA4A62900FDC798 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +95,7 @@
 		E45A30CB1BA4A62900FDC798 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E45A30CA1BA4A62900FDC798 /* characterfeeder.app */,
+				E45A30CA1BA4A62900FDC798 /* Foodie (Beta).app */,
 				E45A30DF1BA4A62900FDC798 /* characterfeederTests.xctest */,
 			);
 			name = Products;
@@ -105,6 +107,7 @@
 				E45A30CF1BA4A62900FDC798 /* AppDelegate.swift */,
 				E45A30D11BA4A62900FDC798 /* ViewController.swift */,
 				E45A30D31BA4A62900FDC798 /* Main.storyboard */,
+				E42B57801BA60A6E002EFC59 /* WoodyCharacterViewController.swift */,
 				E42B577C1BA55737002EFC59 /* DinnerListViewController.swift */,
 				E48405EF1BA517BF000F22B8 /* BreakfastListViewController.swift */,
 				E42B577A1BA54B41002EFC59 /* LunchListViewController.swift */,
@@ -165,7 +168,7 @@
 			);
 			name = characterfeeder;
 			productName = characterfeeder;
-			productReference = E45A30CA1BA4A62900FDC798 /* characterfeeder.app */;
+			productReference = E45A30CA1BA4A62900FDC798 /* Foodie (Beta).app */;
 			productType = "com.apple.product-type.application";
 		};
 		E45A30DE1BA4A62900FDC798 /* characterfeederTests */ = {
@@ -197,6 +200,7 @@
 				TargetAttributes = {
 					E45A30C91BA4A62900FDC798 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 8N76F78X4U;
 					};
 					E45A30DE1BA4A62900FDC798 = {
 						CreatedOnToolsVersion = 6.4;
@@ -262,6 +266,7 @@
 				E45A30D01BA4A62900FDC798 /* AppDelegate.swift in Sources */,
 				E42B577D1BA55737002EFC59 /* DinnerListViewController.swift in Sources */,
 				E42B577B1BA54B41002EFC59 /* LunchListViewController.swift in Sources */,
+				E42B57811BA60A6E002EFC59 /* WoodyCharacterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,10 +395,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = characterfeeder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Foodie (Beta)";
 				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -401,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = characterfeeder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,7 +431,7 @@
 				INFOPLIST_FILE = characterfeederTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/characterfeeder.app/characterfeeder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Foodie (Beta).app/Foodie (Beta)";
 			};
 			name = Debug;
 		};
@@ -438,7 +446,7 @@
 				INFOPLIST_FILE = characterfeederTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/characterfeeder.app/characterfeeder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Foodie (Beta).app/Foodie (Beta)";
 			};
 			name = Release;
 		};

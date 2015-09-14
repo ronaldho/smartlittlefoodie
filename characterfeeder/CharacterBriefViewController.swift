@@ -9,10 +9,24 @@
 import UIKit
 
 class CharacterBriefViewController: UIViewController {
+    
+    
+    @IBOutlet weak var instructionsText: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        func myPerformeCode(timer : NSTimer) {
+//            
+//            // here code to perform
+//            
+//            instructionsText.alpha = 0.85
+//            
+//
+//        }
+//        let myTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("myPerformeCode:"), userInfo: nil, repeats: false)
+        
+        
         // Do any additional setup after loading the view.
     }
 

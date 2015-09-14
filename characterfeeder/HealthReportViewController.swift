@@ -13,7 +13,11 @@ class HealthReportViewController: UIViewController {
     @IBOutlet weak var happinessMeter: KDCircularProgress!
     @IBOutlet weak var energyMeter: KDCircularProgress!
     @IBOutlet weak var caloriesMeter: KDCircularProgress!
+    @IBOutlet weak var happinessMeterLabel: UILabel!
+    @IBOutlet weak var energyMeterLabel: UILabel!
+    @IBOutlet weak var caloriesMeterLabel: UILabel!
     
+
     
     
     var mealChoices = [String]();
@@ -33,7 +37,7 @@ class HealthReportViewController: UIViewController {
     var energysum : Int = 0
     var happinesssum : Int = 0
     //All Meals Dictionaries are in the order of -> "Food Item" : [Happiness, Energy, Calories]
-    var meals : [String : Array<Int>] = ["Egg" : [20,25,72],"Milk" : [30, 35, 102], "Apple": [40,35,116], "Sausage" : [60,20,75], "Steak" : [60,30,500], "Doughnut" : [90,30,260], "Tomato" : [30,25,22], "Pancake" : [80,50,280], "Carrot" : [20,25,25], "Salad" : [10,30,33], "Sandwich" : [50,50,224], "Fish" : [40,100,280], "Orange" : [40,20,62], "Burger" : [90,60,590], "French Fries" : [90,40,365], "Fried Chicken" : [90,145,506], "Cola" : [100,20,182], "Candy" : [70,15,207], "Iced tea" : [60,15,99], "Sushi" : [50,45,122], "Grape" : [70,25,62], "Pizza" : [90,30,570], "Instant Noodles" : [70,65,420], "Hotdog" : [90,70,300],  "Ice-cream" : [100,25,250], "Potato" : [30,25,163], "Mushroom": [25,25,22], "Cheese" : [50,25,113]]
+    var meals : [String : Array<Int>] = ["Egg" : [20,25,72],"Milk" : [30, 35, 102], "Apple": [40,35,116], "Sausage" : [60,20,75], "Steak" : [60,30,500], "Doughnut" : [90,30,260], "Tomato" : [30,25,22], "Pancake" : [80,50,280], "Carrot" : [20,25,25], "Salad" : [10,30,33], "Sandwich" : [50,50,224], "Fish" : [40,100,280], "Orange" : [40,20,62], "Burger" : [90,60,590], "French Fries" : [90,40,365], "Fried Chicken" : [90,145,506], "Cola" : [100,20,182], "Candy" : [70,15,207], "Ice Tea" : [60,15,99], "Sushi" : [50,45,122], "Grape" : [70,25,62], "Pizza" : [90,30,570], "Instant Noodles" : [70,65,420], "Hotdog" : [90,70,300],  "Ice-cream" : [100,25,250], "Potato" : [30,25,163], "Mushroom": [25,25,22], "Cheese" : [50,25,113]]
     
     
     func calculateBMI (height : Float, weight : Float) -> (Float) {
@@ -147,26 +151,35 @@ class HealthReportViewController: UIViewController {
         switch happiness{
         case .low:
             happinessMeter.animateFromAngle(270, toAngle: 120, duration: 50, completion: nil)
+            happinessMeterLabel.text = "Low"
         case .medium:
             happinessMeter.animateFromAngle(270, toAngle: 240, duration: 100, completion: nil)
+            happinessMeterLabel.text = "Medium"
         case .high:
             happinessMeter.animateFromAngle(270, toAngle: 360, duration: 150, completion: nil)
+            happinessMeterLabel.text = "High"
         }
         switch energy{
         case .low:
             energyMeter.animateFromAngle(270, toAngle: 120, duration: 50, completion: nil)
+            energyMeterLabel.text = "Low"
         case .medium:
             energyMeter.animateFromAngle(270, toAngle: 240, duration: 100, completion: nil)
+            energyMeterLabel.text = "Medium"
         case .high:
             energyMeter.animateFromAngle(270, toAngle: 360, duration: 150, completion: nil)
+            energyMeterLabel.text = "High"
         }
         switch calories{
         case .low:
             caloriesMeter.animateFromAngle(270, toAngle: 120, duration: 50, completion: nil)
+            caloriesMeterLabel.text = "Low"
         case .medium:
             caloriesMeter.animateFromAngle(270, toAngle: 240, duration: 100, completion: nil)
+            caloriesMeterLabel.text = "Medium"
         case .high:
             caloriesMeter.animateFromAngle(270, toAngle: 360, duration: 150, completion: nil)
+            caloriesMeterLabel.text = "High"
         }
         
     }
